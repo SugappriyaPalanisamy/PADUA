@@ -1,0 +1,11 @@
+<div class="mt-4 mb-4" *ngIf="isChartReady">
+  <canvas baseChart 
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"
+          [plugins]="lineChartPlugins">
+  </canvas>
+</div>

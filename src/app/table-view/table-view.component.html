@@ -1,0 +1,46 @@
+
+<div class="table-container mt-3" *ngIf="capitalBalanceOutput">
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col" *ngFor="let item of capitalBalanceOutput">{{item.Year}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Age</th>
+        <td *ngFor="let item of capitalBalanceOutput">{{item.Age}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Start Balance</th>
+        <td *ngFor="let item of capitalBalanceOutput">${{item.StartBalance | number: '1.0-0'}}</td>
+      </tr>
+      <tr>
+        <th>Contributions</th>
+        <td *ngFor="let item of capitalBalanceOutput">${{item.Contributions | number: '1.0-0'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Earnings</th>
+        <td *ngFor="let item of capitalBalanceOutput">${{item.Earnings | number: '1.0-0'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Fees</th>
+        <td *ngFor="let item of capitalBalanceOutput">${{item.Fees | number: '1.0-0'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Tax</th>
+        <td *ngFor="let item of capitalBalanceOutput">${{item.Tax | number: '1.0-0'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Withdrawals</th>
+        <td *ngFor="let item of capitalBalanceOutput">${{item.Withdrawals | number: '1.0-0'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">End Balance</th>
+        <td *ngFor="let item of capitalBalanceOutput">${{item.EndBalance | number: '1.0-0'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
