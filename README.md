@@ -2,26 +2,30 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
+## Install Dependencies
+
+Run `npm install` to install required dependencies
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Approach
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Used `Bootstrap` for UI
 
-## Running end-to-end tests
+Created  `Template Driven form` to get required input from the user, added required validation for the fields and created `Custom validator` to check `Withdrawal Starts should be greater than 45 less than 90`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Form values are binded with `CapitalBalanceInputModel`
 
-## Further help
+Added calculate method to create output model `CapitalBalanceOutputModel[]` by followwing calcualtion as shared `Excel`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Created child components(`TableViewComponent` and `LineChartComponent`) to display the Capital Balance Projection(CapitalBalanceOutputModel[])
+
+Used `chart.js` and `ng2-charts` to render line chart
+
+
