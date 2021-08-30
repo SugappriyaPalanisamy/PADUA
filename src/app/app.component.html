@@ -99,7 +99,7 @@
             <span *ngIf="withdrawalStarts.errors?.required">Withdrawal Starts is required.</span>
             
             <div *ngIf="withdrawalStarts.errors.gte">
-              The number should be greater than {{withdrawalStarts.errors.requiredValue}} less than {{withdrawalStarts.errors.maxValue}}
+              Withdrawal Starts should be greater than {{withdrawalStarts.errors.requiredValue}} less than {{withdrawalStarts.errors.maxValue}}
             </div>
           </div>
         </div>
